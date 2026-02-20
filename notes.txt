@@ -19,3 +19,35 @@ commodity_project/
 ├── requirements.txt            # List of packages for pip install
 ├── README.md                   # Project overview & instructions
 └── .gitignore                  # Ignore .venv, data/raw, etc.
+
+.venv/
+
+Contains your virtual environment. Keep it out of Git.
+
+data/
+
+raw/: Put your downloaded dataset here.
+
+processed/: Save cleaned data here, after removing NaNs, formatting dates, etc.
+
+notebooks/
+
+Optional: exploratory analysis in Jupyter Notebook. Good for plots and experiments.
+
+src/
+
+data_loader.py: Load CSV or Yahoo Finance data.
+
+features.py: Generate features like moving averages, lagged prices, etc.
+
+model.py: Train ML models (Random Forest, SVM, Neural Networks).
+
+visualize.py: Plot trends, model predictions, and errors.
+
+main.py
+
+The main script that runs everything: load data → preprocess → train model → evaluate → visualize.
+
+requirements.txt
+
+Export your venv packages:
