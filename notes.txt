@@ -1,0 +1,21 @@
+commodity_project/
+│
+├── .venv/                      # Your virtual environment (ignored by Git)
+├── data/
+│   ├── raw/                    # Original dataset (CSV, Excel, etc.)
+│   └── processed/              # Cleaned or preprocessed data
+│
+├── notebooks/                  # Optional: Jupyter notebooks for exploration
+│   └── exploration.ipynb
+│
+├── src/                        # Source code for your project
+│   ├── __init__.py
+│   ├── data_loader.py          # Functions to load & clean data
+│   ├── features.py             # Feature engineering functions
+│   ├── model.py                # Train/test ML models
+│   └── visualize.py            # Plots & charts
+│
+├── main.py                     # Script to run the full ML workflow
+├── requirements.txt            # List of packages for pip install
+├── README.md                   # Project overview & instructions
+└── .gitignore                  # Ignore .venv, data/raw, etc.
