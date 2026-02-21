@@ -32,6 +32,18 @@ df["Inflation"] = df["CPI"].pct_change(periods=252) * 100
 # calculate real interest rate
 df["Real_Rate"] = df["TNX"] - df["Inflation"]
 
+# --- Add Lagged Features ---
+df["GLD_Lag30"]  = df["GLD"].shift(30)   # price 30 days ago
+df["GLD_Lag60"]  = df["GLD"].shift(60)   # price 60 days ago
+df["GLD_Lag90"]  = df["GLD"].shift(90)   # price 90 days ago
+
+# --- Add Rolling Averages ---
+df["GLD_MA30"]   = df["GLD"].rolling(window=30).mean()   # 30 day average
+df["GLD_MA90"]   = df["GLD"].rolling(window=90).mean()   # 90 day average
+
+# --- Add Momentum ---
+df["GLD_Mom30"]  = df["GLD"] - df["GLD"].shift(30)
+
 # drope nulls
 df = df.dropna()
 
