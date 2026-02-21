@@ -51,3 +51,28 @@ The main script that runs everything: load data → preprocess → train model �
 requirements.txt
 
 Export your venv packages:
+
+This correlation heatmap shows the relationships between various economic and commodity indicators. Here's what
+   it reveals:
+
+   Strongest Positive Correlations:
+
+     - SP500 & CPI: 0.97 - Stock market moves almost perfectly with inflation index
+     - GLD & SP500: 0.83 - Gold prices strongly correlate with stock market
+     - CPI & DXY: 0.81 - Inflation and dollar index move together
+     - GLD & CPI: 0.82 - Gold prices rise with inflation
+
+   Strongest Negative Correlations:
+
+     - Inflation & Real_Rate: -0.86 - Higher inflation strongly reduces real interest rates (by definition)
+     - Real_Rate & CPI: -0.29 - Real rates inversely related to consumer prices
+     - Real_Rate & SP500: -0.27 - Stocks perform worse when real rates are high
+
+   Weak Correlations:
+
+     - TNX (10-year Treasury) shows weak correlation with most variables except Real_Rate (0.33), suggesting it
+   moves somewhat independently
+
+   Key Insight: The data shows commodities (gold), stocks, and inflation all move together, while real interest
+   rates move in the opposite direction - a classic pattern where rising inflation and asset prices correspond to
+   lower real yields.
